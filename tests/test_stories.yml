@@ -1,0 +1,12 @@
+stories:
+- story: test for greet and subscribe
+  steps:
+  - user: |
+     Hello there
+    intent: greet
+  - action: utter_greet
+  - user: |
+     I want to subscribe to the newsletter. My email is example@email.com
+    intent: subscribe
+  - action: newsletter_form
+  - action: utter_subscribed

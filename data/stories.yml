@@ -1,0 +1,49 @@
+stories:
+- story: greet and subscribe
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: subscribe
+  - action: newsletter_form
+  - active_loop: newsletter_form
+  - intent: bye
+  - action: utter_bye
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: subscribe
+  - action: newsletter_form
+  - active_loop: newsletter_form
+  - slot_was_set:
+    - requested_slot: email
+  - slot_was_set:
+    - email: cheungyenny@gmail.com
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_subscribed
+  - intent: bye
+  - action: utter_bye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: bot_challenge
+  - action: utter_bot_challenge
+  - intent: subscribe
+  - action: newsletter_form
+  - active_loop: newsletter_form
+  - slot_was_set:
+    - requested_slot: email
+  - slot_was_set:
+    - email: cheungyenny@gmail.com
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_subscribed
+  - intent: thank
+  - action: utter_welcome
+  - intent: bye
+  - action: utter_bye
