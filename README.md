@@ -16,3 +16,6 @@ conda create -n rasaenv
 # if not, type: source activate rasaenv
 ```
 If you're getting errors, updating conda might help, run: `conda update -n base -c defaults conda`
+
+## Task 3 (bonus): Play with Rasa Interactive
+After installing `rasa`, you could use that to add intents, entities and stories in a much easier way! Have fun.
