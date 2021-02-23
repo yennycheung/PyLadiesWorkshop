@@ -12,5 +12,7 @@ Hey all, welcome to the Getting Started with Rasa Workshop with PyLadies Hamburg
 * Navigate to the directory with your subscription bot project, then follow the [step-by-step installation guide](https://rasa.com/docs/rasa/installation#step-by-step-installation-guide). The guide uses `venv` to set up your virtual environment, if you're more used to `conda` you can follow the instructions below to replace `step 2`.
 ```
 conda create -n rasaenv
+# the environment should be activated now
+# if not, type: source activate rasaenv
 ```
 If you're getting errors, updating conda might help, run: `conda update -n base -c defaults conda`
